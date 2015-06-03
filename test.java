@@ -12,6 +12,7 @@ public class test {
         int N;
         int norm;
         int k = 0;
+        int endGOTO=0;
         System.out.println("Введите цифровое значение N массива ниже и нажмите Enter");
         Scanner in = new Scanner(System.in);
         try {
@@ -39,7 +40,7 @@ public class test {
                 System.out.println("//////////Старт алгоритма\\\\\\\\\\\\\\\\\\\\");
                 Random rand = new Random();
                 System.out.println("Размер массива: "+vah.size());
-                for (int i = N; vah.size() < (N*2); i++) {
+                for (int i = N; endGOTO<100; i++) {
                     System.out.println("Размер массива: "+vah.size());
                     int p = rand.nextInt((N)) + 1;
                     int count = Collections.frequency(vah,p);
@@ -57,6 +58,7 @@ public class test {
                             vah.remove(t);
                             System.out.println("Вывод обрезанного массива: " + vah);
                             System.out.println("Вычлененный нами элемент массива содержал цифру= " + k);
+                            endGOTO=100500;
                         }
                     }
                 }

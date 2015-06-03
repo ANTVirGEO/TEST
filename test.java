@@ -38,23 +38,28 @@ public class test {
                 System.out.println("Внутренности массива:" + vah);
                 System.out.println("//////////Старт алгоритма\\\\\\\\\\\\\\\\\\\\");
                 Random rand = new Random();
+                System.out.println("Размер массива: "+vah.size());
                 for (int i = N; vah.size() < (N*2); i++) {
+                    System.out.println("Размер массива: "+vah.size());
                     int p = rand.nextInt((N)) + 1;
                     int count = Collections.frequency(vah,p);
                     System.out.println("Count of doubles= "+String.valueOf(count));
                     System.out.println("p= "+p);
                     if (count==1) {
                         vah.add(p);
+                        System.out.println(vah);
+                        if (vah.size()==(N*2)){
+                            System.out.println("Новый размер массива: " + vah.size());
+                            System.out.println("Вывод нового шуффла массива: " + vah);
+                            int t = rand.nextInt((N * 2));
+                            System.out.println("Рандомный индекс для удаления элемента массива: " + t);
+                            k = vah.get(t);
+                            vah.remove(t);
+                            System.out.println("Вывод обрезанного массива: " + vah);
+                            System.out.println("Вычлененный нами элемент массива содержал цифру= " + k);
+                        }
                     }
                 }
-                System.out.println("Новый размер массива: " + N * 2);
-                System.out.println("Вывод нового шуффла массива: " + vah);
-                int t = rand.nextInt((N * 2));
-                System.out.println("Рандомный индекс для удаления элемента массива: " + t);
-                k = vah.get(t);
-                vah.remove(t);
-                System.out.println("Вывод обрезанного массива: " + vah);
-                System.out.println("Вычлененный нами элемент массива содержал цифру= " + k);
             }
         }
     }

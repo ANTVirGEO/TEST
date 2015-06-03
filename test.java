@@ -1,9 +1,7 @@
 package test;
 
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Random;
+import java.io.IOError;
 import java.util.Scanner;
 
 public class test {
@@ -11,8 +9,6 @@ public class test {
     public static void main (String []args) {
         int N;
         int norm;
-
-
         System.out.println("Введите цифровое значение N массива ниже и нажмите Enter");
         Scanner in = new Scanner(System.in);
         try {
@@ -26,10 +22,8 @@ public class test {
                     m.Algoritm(m.Generate(N),N);
                 }
             }
-        } catch (Exception e) {
+        } catch (IOError e) {
             System.out.println("Ошибка вводного числа! : " + e + "\n Программа прекратила свою работу");
-            N = 0;
-            norm = 0;
         }
     }
 }

@@ -32,7 +32,7 @@ public class Mass {
                             "Вывод нового массива со случайным порядком," +
                             " не затрагивающим элементый начального массива: " + Massiv);
                     int t = rand.nextInt(N)+N;
-                    System.out.println("Рандомный индекс для удаления элемента массива: " + t);
+                    System.out.println("Рандомный индекс для удаления элемента массива= " + t);
                     k = (int) Massiv.get(t);
                     Massiv.remove(t);
                     System.out.println("Вывод обрезанного массива, " +

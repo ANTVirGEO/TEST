@@ -40,8 +40,7 @@ public class test {
                 Random rand = new Random();
                 for (int i = N; vah.size() < (N*2); i++) {
                     int p = rand.nextInt((N)) + 1;
-                    int count = Collections.frequency(vah,i-N+1);
-                    System.out.println("Значение элемента массива= "+(i-N+1));
+                    int count = Collections.frequency(vah,p);
                     System.out.println("Count of doubles= "+String.valueOf(count));
                     System.out.println("p= "+p);
                     if (count==1) {

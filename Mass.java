@@ -27,16 +27,16 @@ public class Mass {
             int count = Collections.frequency(Massiv, p);
             if (count==1) {
                 Massiv.add(p);
-                System.out.println(Massiv);
                 if (Massiv.size()==(N*2)){
                     System.out.println("Новый размер массива: " + Massiv.size()+"\n"+
                             "Вывод нового массива со случайным порядком," +
                             " не затрагивающим элементый начального массива: " + Massiv);
-                    int t = rand.nextInt((N * 2));
+                    int t = rand.nextInt(N)+N;
                     System.out.println("Рандомный индекс для удаления элемента массива: " + t);
                     k = (int) Massiv.get(t);
                     Massiv.remove(t);
-                    System.out.println("Вывод обрезанного массива: " + Massiv+"\n" +
+                    System.out.println("Вывод обрезанного массива, " +
+                            "не затрагивающего элементов изначального массива: " + Massiv+"\n" +
                             "Вычлененный нами элемент массива содержал цифру= " + k);
                     System.out.println();
                     endGOTO=100500;

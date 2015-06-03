@@ -46,13 +46,9 @@ public class test {
                     if (count==1) {
                         vah.add(p);
                     }
-
-                    System.out.println(vah);
                 }
                 System.out.println("Новый размер массива: " + N * 2);
-                System.out.println("Вывод нового массива: " + vah);
-                Collections.shuffle(vah);
-                System.out.println("Вывод шуффла массива: " + vah);
+                System.out.println("Вывод нового шуффла массива: " + vah);
                 int t = rand.nextInt((N * 2));
                 System.out.println("Рандомный индекс для удаления элемента массива: " + t);
                 k = vah.get(t);
